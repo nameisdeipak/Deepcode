@@ -1,4 +1,4 @@
-# DEEPCODE
+# DEEPCODE  (Full-Stack-Project)
 **Coding problem solver platform**
 Project link :  https://www.deepcode.shop
 
