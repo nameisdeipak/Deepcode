@@ -1,6 +1,6 @@
 # DEEPCODE
 **Coding problem solver platform**
-proejcet link :  https://www.deepcode.shop
+Project link :  https://www.deepcode.shop
 
 **Project Overview :** 
 
