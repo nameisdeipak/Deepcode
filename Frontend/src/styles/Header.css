@@ -1,0 +1,41 @@
+/* Inspired by the video: A subtle, modern glitch effect on hover */
+.text-glitch-hover {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-glitch-hover:hover {
+    transform: skewX(-5deg);
+}
+
+.text-glitch-hover::before,
+.text-glitch-hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Use parent's background */
+    color: inherit; /* Use parent's color */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Red channel shift */
+.text-glitch-hover:hover::before {
+    text-shadow: -1px 0 red;
+    transform: translate(2px, 2px);
+    opacity: 0.7;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+/* Blue/Cyan channel shift */
+.text-glitch-hover:hover::after {
+    text-shadow: 1px 0 cyan;
+    transform: translate(-2px, -2px);
+    opacity: 0.7;
+    -webkit-clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
